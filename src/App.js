@@ -18,7 +18,7 @@ function App() {
   const [selectedTeam, setSelectedTeam] = useState(JSON.parse(localStorage.getItem('selectedTeam')) || 'TeamB');
 
 
-  const [employees, setEmployees] = useState([JSON.parse(localStorage.getItem('employeeList')) ||
+  const [employees, setEmployees] = useState(JSON.parse(localStorage.getItem('employeeList')) || [
       {
           id: 1,
           fullName: "Bob Jones",
@@ -102,8 +102,8 @@ function App() {
           designation: "Graphic Designer",
           gender: "male",
           teamName: "TeamD"
-      }
-  ]);
+      }]
+  );
 
 
   useEffect(() => {
